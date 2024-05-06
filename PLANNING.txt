@@ -5,6 +5,15 @@ features / parts
     - database with diff users and logins
     - database of items for each user + state of whether completed (many to 1 r/s)
         - deadlines included in database + date completed (1 to 1)
+
+CREATE DATABASE todolist;
+
+GRANT ALL ON todolist.* TO 'jedo'@'localhost' IDENTIFIED BY 'minior';
+GRANT ALL ON todolist.* TO 'jedo'@'127.0.0.1' IDENTIFIED BY 'minior';
+
+CREATE TABLE status;
+status_id INTEGER NOT NULL KEY
+task_id INTEGER 
     
 2. php to retrieve from server info + user verification + sessions
 
