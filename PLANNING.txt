@@ -11,13 +11,22 @@ CREATE DATABASE todolist;
 GRANT ALL ON todolist.* TO 'jedo'@'localhost' IDENTIFIED BY 'minior';
 GRANT ALL ON todolist.* TO 'jedo'@'127.0.0.1' IDENTIFIED BY 'minior';
 
-CREATE TABLE users;
+CREATE TABLE users (
+    user_id INTEGER NOT NULL AUTO_INCREMENT,
+    username varchar(255),
+    password varchar(255),
+);
 
+CREATE TABLE tasks (
+    task_id INTEGER NOT NULL AUTO_INCREMENT,
+    task varchar(255),
+    status BOOL,
+    user_id INTEGER,
+    CONSTRAINT FOREIGN KEY (user_id) REFERENCES users (user_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE,
+);
+    
 
-
-CREATE TABLE status;
-status_id BOOL NOT NULL KEY;
-task_id INTEGER 
     
 2. php to retrieve from server info + user verification + sessions
 
