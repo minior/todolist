@@ -1,0 +1,14 @@
+PLANNING
+
+features / parts
+1. SQL
+    - database with diff users and logins
+    - database of items for each user + state of whether completed (many to 1 r/s)
+        - deadlines included in database + date completed (1 to 1)
+    
+2. php to retrieve from server info + user verification + sessions
+
+3. simple html to have checkbox that upon clicking, checks off task 
+    - also include colour change
+
+4. have a page with all completed tasks and date completed
