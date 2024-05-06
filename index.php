@@ -16,7 +16,7 @@ if (isset($_SESSION['username'])) {
         <!-- css style sheet -->
     </head>
 <body>
-    <?= '<h1> Welcome '. $username.'! </h1>' ?>
+    <?= '<h1> Welcome'. $username.'! </h1>' ?>
     <p> Start your productivity session, or <a href="login.php">Log In</a> to access your saved lists </p>
 </body>
 </html>
