@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2024-05-06T10:58:23.696Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="OdgFohZKFUBWjtbWwWAz" version="24.3.1" type="github">
+  <diagram name="Page-1" id="VWxVCw6X_SoDUoFXPZ3n">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QmNUUnY-5J7JSYMKGsJZ-1" value="List items" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QmNUUnY-5J7JSYMKGsJZ-2" value="list items&lt;div&gt;status of list item&lt;/div&gt;&lt;div&gt;users&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="30" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="QmNUUnY-5J7JSYMKGsJZ-3" value="users" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QmNUUnY-5J7JSYMKGsJZ-4" value="task status" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="290" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QmNUUnY-5J7JSYMKGsJZ-12" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=-0.008;exitY=0.633;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.867;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="QmNUUnY-5J7JSYMKGsJZ-3" target="QmNUUnY-5J7JSYMKGsJZ-1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="370" y="450" as="sourcePoint" />
+            <mxPoint x="470" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QmNUUnY-5J7JSYMKGsJZ-13" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;rounded=0;exitX=0.392;exitY=-0.017;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="QmNUUnY-5J7JSYMKGsJZ-1" target="QmNUUnY-5J7JSYMKGsJZ-4" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="390" y="220" as="sourcePoint" />
+            <mxPoint x="470" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
