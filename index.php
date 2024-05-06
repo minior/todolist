@@ -4,7 +4,7 @@
 session_start(); 
 //defining variables: username, 
 if (isset($_SESSION['username'])) {
-    $username=$_SESSION['username'];
+    $username=' '.$_SESSION['username'];
 } else {
     $username="";
 }
