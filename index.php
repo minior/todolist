@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 <?php
 session_start(); 
 //defining variables: username, 
@@ -9,6 +7,8 @@ if (isset($_SESSION['username'])) {
     $username="";
 }
 ?>
+<!DOCTYPE html>
+<html>
     <head>
         <title>minior's To-Do List</title>
         <meta charset='utf-8'>
