@@ -19,8 +19,9 @@ CREATE TABLE users (
 
 CREATE TABLE tasks (
     task_id INTEGER NOT NULL AUTO_INCREMENT,
-    task varchar(255),
-    status BOOL,
+    task varchar(255) NOT NULL,
+    status BOOL NOT NULL,
+    deadline DATE
     user_id INTEGER,
     CONSTRAINT FOREIGN KEY (user_id) REFERENCES users (user_id) 
         ON DELETE CASCADE ON UPDATE CASCADE,
