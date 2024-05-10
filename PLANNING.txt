@@ -34,4 +34,4 @@ CREATE TABLE tasks (
 3. simple html to have checkbox that upon clicking, checks off task 
     - also include colour change
 
-4. have a page with all completed tasks and date completed
+4. have a page with all completed tasks and date completed (phase 2)
