@@ -33,5 +33,6 @@ CREATE TABLE tasks (
 
 3. simple html to have checkbox that upon clicking, checks off task 
     - also include colour change
+        PROBLEM- how to run js stuff only if logged in -> perhaps idh to. I can just run the code to retrieve sql components and add them (see crud app from coursera javascript course)
 
 4. have a page with all completed tasks and date completed (phase 2)
