@@ -30,6 +30,7 @@ CREATE TABLE tasks (
 
     
 2. php to retrieve from server info + user verification + sessions
+ - php page to show previously completed tasks (READ)
 
 3. simple html to have checkbox that upon clicking, checks off task 
     - also include colour change
