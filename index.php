@@ -19,5 +19,6 @@ if (isset($_SESSION['username'])) {
 <?= '<h1> Welcome'. $username.'! </h1>' ?>
 <p> Start your productivity session, or <a href="login.php">Log In</a> to access your saved lists </p>
 <!-- javascript buttons etc. for populating task field -->
+<!-- logout -->
 </body>
 </html>
