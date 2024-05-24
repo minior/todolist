@@ -1,16 +1,27 @@
 <?php
 require_once "pdo.php";
 
-//check if logout button is pressed
-//check if logged in
 session_start(); 
+//check if logout button is pressed
+if (isset($_SESSION['logout'])) {
+    session_unset();
+    $_SESSION['successmsg'] = 'logout successful';
+    header('Location: index.php');
+    return;
+}
+
 //defining variables: username, 
 if (isset($_SESSION['username'])) {
     $username=' '.$_SESSION['username'];
 } else {
     $username="";
 }
-//retrieve database entries
+//retrieve database entries (taskid, task, status, deadline, uid tagged to task)
+if (isset($_SESSION['username'])) {
+    $stmt = $pdo->prepare('SELECT * FROM users JOIN tasks ON users.user_id=tasks.user_id WHERE user_id=:uid');
+    $stmt->execute(array(':uid' => $_SESSION['user_id']));
+    $rows = $stmt->fetchall(PDO::FETCH_ASSOC);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,7 +34,7 @@ if (isset($_SESSION['username'])) {
 <body>
 <?= '<h1> Welcome'. $username.'! </h1>' ?>
 <p> Start your productivity session, or <a href="login.php">Log In</a> to access your saved lists </p>
-<!-- javascript buttons etc. for populating task field . see coursera courses 9 & 10-->
+<!-- javascript buttons etc. for populating task field . see coursera courses 9 & 10 -->
 <!-- logout -->
 </body>
 </html>

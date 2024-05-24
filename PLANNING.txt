@@ -1,5 +1,10 @@
 PLANNING
 
+NEXT STEPS
+    - accountcreate: empty.
+    - index: start populating html / javascript actual todolist
+    - login: form of login page -> php sections
+
 features / parts
 1. SQL
     - database with diff users and logins
@@ -37,3 +42,6 @@ CREATE TABLE tasks (
         PROBLEM- how to run js stuff only if logged in -> perhaps idh to. I can just run the code to retrieve sql components and add them (see crud app from coursera javascript course)
 
 4. have a page with all completed tasks and date completed (phase 2)
+
+UNSURE PARTS:
+    login.php: use of POST to redir w user_id
