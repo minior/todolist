@@ -1,9 +1,10 @@
 PLANNING
 
 NEXT STEPS
-    - accountcreate: empty.
+    - accountcreate: make frontend for page (simple form).
     - index: start populating html / javascript actual todolist
     - login: form of login page -> php sections
+    -next feature: form validation (user n pw filled) (alphanumeric pw)
 
 features / parts
 1. SQL
@@ -36,6 +37,7 @@ CREATE TABLE tasks (
     
 2. php to retrieve from server info + user verification + sessions
  - php page to show previously completed tasks (READ)
+ - escapes security issues such as injections
 
 3. simple html to have checkbox that upon clicking, checks off task 
     - also include colour change

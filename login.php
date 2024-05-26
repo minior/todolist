@@ -29,6 +29,15 @@ if (isset($_SESSION['errormsg'])) {
     echo ("<p style='color:red;'><strong>" . htmlentities($_SESSION['errormsg'])."</strong></p>\n");
 }
 ?>
+<form method = "POST">
+    <label for ='username'> Username </label>
+    <input type ='text' name='username' id='username'> </br>
+    <label for ='pw'> Password </label>
+    <input type ='text' name='pw' id='pw'> </br>
+</form>
     <p> Don't have an account? <a href="accountcreate.php">Create one!</a> </p> 
+<script>
+    // show password
+</script>
 </body>
 </html>
