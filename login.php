@@ -2,6 +2,11 @@
 require_once "pdo.php";
 
 //check if cancel button is pressed
+if(isset($_POST['cancel'])) {
+    header('Location = index.php');
+    return;
+}
+
 session_start();
 //if logged in, redir to index 
 if(isset($_SESSION['username'])) {
@@ -9,10 +14,12 @@ if(isset($_SESSION['username'])) {
     return;
 }
 
-//insert user info
+//validate user info (require & call fn)
+
+//insert user info (require & call)
 
 
-//edit / delete / create user
+//edit / delete / create user (require and call)
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,8 +41,13 @@ if (isset($_SESSION['errormsg'])) {
     <input type ='text' name='username' id='username'> </br>
     <label for ='pw'> Password </label>
     <input type ='text' name='pw' id='pw'> </br>
+    <input type='submit' value='Log In' onclick='return formvalidate();'>
+    <input type='submit' name='cancel' value='Cancel'>
 </form>
     <p> Don't have an account? <a href="accountcreate.php">Create one!</a> </p> 
+<script>
+    //formvalidate src
+</script>
 <script>
     // show password
 </script>

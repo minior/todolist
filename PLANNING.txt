@@ -4,7 +4,9 @@ NEXT STEPS
     - accountcreate: make frontend for page (simple form).
     - index: start populating html / javascript actual todolist
     - login: form of login page -> php sections
-    -next feature: form validation (user n pw filled) (alphanumeric pw)
+    -next feature: form validation in login & accountcreate (user n pw filled) (alphanumeric pw)
+        - js and php files
+    -show password buttons
 
 features / parts
 1. SQL
