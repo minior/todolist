@@ -1,12 +1,15 @@
 PLANNING
 
 NEXT STEPS
-    - accountcreate: make frontend for page (simple form).
+    - accountcreate: make frontend for page (simple form). (more JS & php validation needed)
     - index: start populating html / javascript actual todolist
     - login: form of login page -> php sections
     -next feature: form validation in login & accountcreate (user n pw filled) (alphanumeric pw)
-        - js and php files
+        - jsDONE and php files
     -show password buttons
+    
+    -feature: pretty-fy js alert for form validations
+    -expand feature: email validation, allow ALL types of domains eg '.fr'
 
 features / parts
 1. SQL
@@ -49,3 +52,4 @@ CREATE TABLE tasks (
 
 UNSURE PARTS:
     login.php: use of POST to redir w user_id
+    js form validate.js: will !pw.value cause '0' to be read as 'empty'?

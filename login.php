@@ -41,13 +41,11 @@ if (isset($_SESSION['errormsg'])) {
     <input type ='text' name='username' id='username'> </br>
     <label for ='pw'> Password </label>
     <input type ='text' name='pw' id='pw'> </br>
-    <input type='submit' value='Log In' onclick='return formvalidate();'>
+    <input type='submit' value='Log In' onclick='return loginValidate();'>
     <input type='submit' name='cancel' value='Cancel'>
 </form>
     <p> Don't have an account? <a href="accountcreate.php">Create one!</a> </p> 
-<script>
-    //formvalidate src
-</script>
+<script src="js-formvalidation.js"></script>
 <script>
     // show password
 </script>
