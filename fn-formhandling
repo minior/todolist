@@ -1,0 +1,13 @@
+<?php
+//ensure 1. @ is present in email and 2. contains .com/.edu etc.
+//maybe pass $pw and $username of variables to be defined
+function loginValidate() {
+    $pw = $_POST['pw'];
+    $username = $_POST['username'];
+    //use strlen
+    if(( strlen($pw) < 1 ) || ( strlen($username) < 1 )) {
+        $_SESSION['errormsg'] = 'Please fill out both fields.';
+    } elseif ( (str_contains($username, '@')) && ( (str_contains($username, '.co')) || (str_contains($username, '.net')) || (str_contains($username, '.edu')) || (str_contains($username, '.org')) ) ) {
+        $_SESSION['errormsg'] = 'Check if email address is valid.';
+    }
+}

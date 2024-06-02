@@ -9,7 +9,7 @@ function loginValidate() {
             alert("Please fill out both fields.");
             return false;
         } else if (!(username.value.includes('@') && (username.value.includes('.co') || username.value.includes('.net') || username.value.includes('.edu') || username.value.includes('.org'))) ) {
-            alert ("Invalid email address.");
+            alert ("Check if email address is valid.");
             return false;
         } return true;
     } catch (error) {

@@ -4,9 +4,12 @@ NEXT STEPS
     - accountcreate: make frontend for page (simple form). (more JS & php validation needed)
     - index: start populating html / javascript actual todolist
     - login: form of login page -> php sections
-    -next feature: form validation in login & accountcreate (user n pw filled) (alphanumeric pw)
+    - next feature: form validation in login (DONE) & accountcreate (user n pw filled) (alphanumeric pw)
         - jsDONE and php files
+        - add email field to database, to be along with username
+        - add email confirmation (send email for validation)
     -show password buttons
+        - add prohibited words for usernames
     
     -feature: pretty-fy js alert for form validations
     -expand feature: email validation, allow ALL types of domains eg '.fr'

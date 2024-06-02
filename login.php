@@ -1,5 +1,6 @@
 <?php
 require_once "pdo.php";
+require_once "fn-formvalidation.php";
 
 //check if cancel button is pressed
 if(isset($_POST['cancel'])) {
@@ -15,8 +16,9 @@ if(isset($_SESSION['username'])) {
 }
 
 //validate user info (require & call fn)
+loginValidate()
 
-//insert user info (require & call)
+//insert user info (require & call) (diff page)
 
 
 //edit / delete / create user (require and call)
