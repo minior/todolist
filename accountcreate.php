@@ -1,13 +1,17 @@
 <?php
 require_once "pdo.php";
-require_once "accounthandling.php";
-require_once "fn-formhandling.php";
+require_once "php-accounthandling.php";
+require_once "php-formhandling.php";
 
 //redir if logged in
-if(isset($_SESSION['user_id']))
+if(isset($_SESSION['user_id'])) {
+    $_SESSION['errormsg'] = 'Already logged in.';
+    header('location: index.php');
+    exit;
+}
 
 session_start();
-//insert user info (require & call) 
+//validate and insert form data
 if (isset($_POST['create'])) {
     accountCreate($pdo, $_POST['username'], $_POST['email'], $_POST['pw']);
 }

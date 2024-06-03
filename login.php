@@ -1,6 +1,6 @@
 <?php
 require_once "pdo.php";
-require_once "fn-formhandling.php";
+require_once "php-formhandling.php";
 
 //check if cancel button is pressed
 if(isset($_POST['cancel'])) {
@@ -8,7 +8,7 @@ if(isset($_POST['cancel'])) {
     exit;
 }
 session_start();
-//if logged in, redir to index 
+//NOT DONE if logged in, redir to index (add user_id GET info)
 if(isset($_SESSION['user_id'])) {
     header("location: index.php");
     exit;
@@ -17,6 +17,7 @@ if(isset($_SESSION['user_id'])) {
 if(isset($_POST['login'])) {
     loginValidate($pdo, $_POST['username'] ?? '', $_POST['pw'] ?? '');
 }
+//check for match  (maybe in loginValidate function)
 ?>
 <!DOCTYPE html>
 <html>

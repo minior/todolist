@@ -5,10 +5,6 @@ function loginValidate($pdo, $username, $pw) {
         $_SESSION['errormsg'] = 'Please fill out both fields.';
         header ('location: login.php');
         return;
-    } elseif ( !(str_contains($username, '@')) && ( (str_contains($username, '.co')) || (str_contains($username, '.net')) || (str_contains($username, '.edu')) || (str_contains($username, '.org')) ) ) {
-        $_SESSION['errormsg'] = 'Check if email address is valid.';
-        header ('location: login.php');
-        return;
     } else {
         //NOT DONE check for database match
         $salt =
