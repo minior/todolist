@@ -2,14 +2,18 @@ PLANNING
 
 NEXT STEPS
     - accountcreate: make frontend for page (simple form). (more JS & php validation needed)
-    - index: start populating html / javascript actual todolist
-    - login: form of login page -> php sections
-    - next feature: form validation in login (DONE) & accountcreate (user n pw filled) (alphanumeric pw)
-        - jsDONE and php files
-        - add email field to database, to be along with username
-        - add email confirmation (send email for validation)
-    -show password buttons
+        - accountcreate (user n email n pw filled) (alphanumeric pw)
+        - DONE add email field to database, to be along with username
+    - index: start populating html / javascript actual todolist (refer to add/edit.php in 10 htdocs)
+    - login: DONE form of login page 
+        -> DONE php login validation 
+        - show password buttons
+        - ensure match with database
+    - next feature: DONE form validation in login 
+        - DONE js and php files 
+    - add email confirmation (send email for validation)
         - add prohibited words for usernames
+    - add feature to show task complete date
     
     -feature: pretty-fy js alert for form validations
     -expand feature: email validation, allow ALL types of domains eg '.fr'
@@ -28,17 +32,20 @@ GRANT ALL ON todolist.* TO 'jedo'@'127.0.0.1' IDENTIFIED BY 'minior';
 CREATE TABLE users (
     user_id INTEGER NOT NULL AUTO_INCREMENT,
     username varchar(255),
+    email varchar(255),
     password varchar(255),
+    PRIMARY KEY(user_id)
 );
 
 CREATE TABLE tasks (
     task_id INTEGER NOT NULL AUTO_INCREMENT,
     task varchar(255) NOT NULL,
     status BOOL NOT NULL,
-    deadline DATE
+    deadline DATE,
     user_id INTEGER,
-    CONSTRAINT FOREIGN KEY (user_id) REFERENCES users (user_id) 
-        ON DELETE CASCADE ON UPDATE CASCADE,
+    PRIMARY KEY(task_id),
+    CONSTRAINT fk_userid FOREIGN KEY (user_id) REFERENCES users (user_id) 
+        ON DELETE CASCADE ON UPDATE CASCADE
 );
     
 

@@ -2,8 +2,8 @@
 function loginValidate() { 
     console.log('validating form fields')
     try {
-        var pw = document.getElementById('pw');
-        var username = document.getElementById('username');
+        const pw = document.getElementById('pw');
+        const username = document.getElementById('username');
         //UNSURE IF 0 WILL CAUSE ERROR
         if (!pw.value || !username.value) {
             alert("Please fill out both fields.");

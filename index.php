@@ -7,11 +7,10 @@ if (isset($_SESSION['logout'])) {
     session_unset();
     $_SESSION['successmsg'] = 'logout successful';
     header('Location: index.php');
-    return;
+    exit;
 }
-
-//defining variables: username, 
-if (isset($_SESSION['username'])) {
+//defining variables: username, user_id?
+if (isset($_SESSION['user_id'])) {
     $username=' '.$_SESSION['username'];
 } else {
     $username="";

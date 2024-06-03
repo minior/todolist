@@ -1,27 +1,22 @@
 <?php
 require_once "pdo.php";
-require_once "fn-formvalidation.php";
+require_once "fn-formhandling.php";
 
 //check if cancel button is pressed
 if(isset($_POST['cancel'])) {
-    header('Location = index.php');
-    return;
+    header('Location: index.php');
+    exit;
 }
-
 session_start();
 //if logged in, redir to index 
-if(isset($_SESSION['username'])) {
+if(isset($_SESSION['user_id'])) {
     header("location: index.php");
-    return;
+    exit;
 }
-
 //validate user info (require & call fn)
-loginValidate()
-
-//insert user info (require & call) (diff page)
-
-
-//edit / delete / create user (require and call)
+if(isset($_POST['login'])) {
+    loginValidate($pdo, $_POST['username'] ?? '', $_POST['pw'] ?? '');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,14 +31,15 @@ loginValidate()
 <?php
 if (isset($_SESSION['errormsg'])) {
     echo ("<p style='color:red;'><strong>" . htmlentities($_SESSION['errormsg'])."</strong></p>\n");
+    unset($_SESSION['errormsg']);
 }
 ?>
 <form method = "POST">
     <label for ='username'> Username </label>
     <input type ='text' name='username' id='username'> </br>
     <label for ='pw'> Password </label>
-    <input type ='text' name='pw' id='pw'> </br>
-    <input type='submit' value='Log In' onclick='return loginValidate();'>
+    <input type ='password' name='pw' id='pw'> </br>
+    <input type='submit' name='login' value='Log In' onclick='return loginValidate();'>
     <input type='submit' name='cancel' value='Cancel'>
 </form>
     <p> Don't have an account? <a href="accountcreate.php">Create one!</a> </p> 
