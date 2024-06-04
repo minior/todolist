@@ -1,11 +1,11 @@
 <?php
 function accountCreate($pdo, $username, $email, $pw) {
-    //validate
+    //username & email validate
     if(( strlen($username) < 1 ) || ( strlen($email) < 1 ) || ( strlen($pw))) {
         $_SESSION['errormsg'] = 'Please fill out both fields.';
         header ('location: accountcreate.php');
         return;
-    } elseif ( !(str_contains($email, '@')) && ( (str_contains($username, '.co')) || (str_contains($username, '.net')) || (str_contains($username, '.edu')) || (str_contains($username, '.org')) ) ) {
+    } elseif ( !(str_contains($email, '@')) && ( (str_contains($email, '.co')) || (str_contains($email, '.net')) || (str_contains($email, '.edu')) || (str_contains($email, '.org')) ) ) {
         $_SESSION['errormsg'] = 'Check if email address is valid.';
         header ('location: accountcreate.php');
         return;
@@ -25,6 +25,8 @@ function accountCreate($pdo, $username, $email, $pw) {
                 return;
             }
         } else {
+            //NOTDONE pw validation
+            if ($pw)
             //NOT DONE else insert (add pw hashing)
             $stmt = $pdo->prepare('INSERT INTO users (username, email, password) VALUES ( :un, :em, :pw )');
             $stmt -> execute(array(':un'=>$username, ':em'=>$email, ':pw'=>$pw));
