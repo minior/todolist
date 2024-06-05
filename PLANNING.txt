@@ -1,20 +1,23 @@
 PLANNING
 
 NEXT STEPS
-    - accountcreate: make frontend for page (simple form). 
-        - accountcreate (user n email n pw filled) (alphanumeric pw)
-            - JS validation
-            - php validation 
-        - add pw hashing before inserting
+    - accountcreate: DONE make frontend for page (simple form). 
+        - DONE accountcreate (user n email n pw filled)
+            - DONE JS validation
+            - DONE php validation 
+                - DONE alphanumeric username (or inc _) & pw containing 1 alphabet + 1 number (regex)
+        - DONE add pw hashing before inserting
         - DONE add email field to database, to be along with username
     - index: start populating html / javascript actual todolist (refer to add/edit.php in 10 htdocs)
     - login: DONE form of login page 
         -> DONE php login validation 
         - show password buttons
-        - ensure match with database
+        - DONE ensure match with database
     - next feature: DONE form validation in login 
         - DONE js and php files 
-    - add function file for echoing and unsetting error / success msges
+    - DONE add function file for echoing and unsetting error / success msges
+    - might combine some function files (ac create & login tgt maybe)
+        - might organise functions into classes, then follow psr-4 (class match file name)
     - add email confirmation (send email for validation, delete from database if not confirmed after x days)
         - add prohibited words for usernames
     - add feature to show task complete date
@@ -22,6 +25,9 @@ NEXT STEPS
     
     -feature: pretty-fy js alert for form validations
     -expand feature: email validation, allow ALL types of domains eg '.fr'
+
+MY CONVENTIONS
+    - classes use PascalCase, functions & methods use camelCase, variables use snake_case
 
 features / parts
 1. SQL

@@ -1,6 +1,6 @@
-//get pw & username, validate that they are 1. not empty, and 2.email has @ + .com/.net/.edu
+//get pw & username, validate that they are 1. not empty
 function loginValidate() { 
-    console.log('validating form fields')
+    console.log('Validating form fields...')
     try {
         const pw = document.getElementById('pw');
         const username = document.getElementById('username');
@@ -8,15 +8,12 @@ function loginValidate() {
         if (!pw.value || !username.value) {
             alert("Please fill out both fields.");
             return false;
-        } else if (!(username.value.includes('@') && (username.value.includes('.co') || username.value.includes('.net') || username.value.includes('.edu') || username.value.includes('.org'))) ) {
-            alert ("Check if email address is valid.");
-            return false;
         } return true;
     } catch (error) {
         console.log(error.name);
         console.log(error.message);
         console.log(error.stack);
-        alert('Something seems to have gone wrong. Refresh this page.')
+        alert('Something seems to have gone wrong. Refresh this page.');
     }
     return false;
 }

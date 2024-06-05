@@ -6,9 +6,8 @@ function loginValidate($pdo, $username, $pw) {
         header ('location: login.php');
         return;
     } else {
-        //NOT DONE check for database match
-        $salt =
-        $pwcheck =
+        //check for database match
+        $pwcheck = password_hash($pw, PASSWORD_DEFAULT);
         $stmt = $pdo->prepare('SELECT user_id, username FROM users WHERE username=:un AND password = :pw');
         $stmt -> execute(array( ':un' => $username, ':pw' => $pwcheck));
         $row = $stmt -> fetch(PDO::FETCH_ASSOC);
@@ -22,7 +21,7 @@ function loginValidate($pdo, $username, $pw) {
             $_SESSION['successmsg'] = 'Welcome back!';
             $_SESSION['username'] = $row['username'];
             $_SESSION['user_id'] = $row['user_id'];
-            header ('location:index.php');
+            header ('location:index.php'. $_SESSION['user_id']);
             return;
         }
     }

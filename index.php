@@ -1,5 +1,6 @@
 <?php
 require_once "pdo.php";
+require_once "php-messagedisplay.php";
 
 session_start(); 
 //check if logout button is pressed
@@ -31,7 +32,8 @@ if (isset($_SESSION['username'])) {
         <!-- css style sheet -->
     </head>
 <body>
-<?= '<h1> Welcome'. $username.'! </h1>' ?>
+<?= '<h1> Welcome'. htmlentities($username).'! </h1>' ?>
+<?php displayMessage(); ?>
 <p> Start your productivity session, or <a href="login.php">Log In</a> to access your saved lists </p>
 <!-- javascript buttons etc. for populating task field . see coursera courses 9 & 10 -->
 <!-- logout -->

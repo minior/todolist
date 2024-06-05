@@ -1,6 +1,7 @@
 <?php
 require_once "pdo.php";
 require_once "php-formhandling.php";
+require_once "php-messagedisplay.php";
 
 //check if cancel button is pressed
 if(isset($_POST['cancel'])) {
@@ -8,9 +9,9 @@ if(isset($_POST['cancel'])) {
     exit;
 }
 session_start();
-//NOT DONE if logged in, redir to index (add user_id GET info)
+//if logged in, redir to index
 if(isset($_SESSION['user_id'])) {
-    header("location: index.php");
+    header("location: index.php". $_SESSION['user_id']);
     exit;
 }
 //validate user info (require & call fn)
@@ -29,12 +30,7 @@ if(isset($_POST['login'])) {
     </head>     
 <body>
     <h1> Enter Login Details </h1>
-<?php
-if (isset($_SESSION['errormsg'])) {
-    echo ("<p style='color:red;'><strong>" . htmlentities($_SESSION['errormsg'])."</strong></p>\n");
-    unset($_SESSION['errormsg']);
-}
-?>
+<?php displayMessage(); ?>
 <form method = "POST">
     <label for ='username'> Username </label>
     <input type ='text' name='username' id='username'> </br>
