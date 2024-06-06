@@ -4,6 +4,7 @@ require_once "php-accounthandling.php";
 require_once "php-formhandling.php";
 require_once "php-messagedisplay.php";
 
+session_start();
 //redir if logged in
 if(isset($_SESSION['user_id'])) {
     $_SESSION['errormsg'] = 'Already logged in.';
@@ -11,7 +12,6 @@ if(isset($_SESSION['user_id'])) {
     exit;
 }
 
-session_start();
 //validate and insert form data
 if (isset($_POST['create'])) {
     accountCreate($pdo, $_POST['username'], $_POST['email'], $_POST['pw'], $_POST['cfmpw']);
