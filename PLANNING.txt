@@ -12,8 +12,10 @@ NEXT STEPS
         - make task input fields prettier (no outline etc eg. Notion)
     - login: DONE form of login page 
         -> DONE php login validation 
+            - DONE fix password validation using password_verify()
         - show password buttons
         - DONE ensure match with database
+            - DONE change validation to 'username not registered / not in use'
     - next feature: DONE form validation in login 
         - DONE js and php files 
     - DONE add function file for echoing and unsetting error / success msges

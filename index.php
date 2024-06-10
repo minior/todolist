@@ -37,12 +37,18 @@ if (isset($_SESSION['username'])) {
     </head>
 <body>
 <?= '<h1> Welcome'. htmlentities($username).'! </h1>' ?>
-<?php displayMessage(); ?>
-<p> Start your productivity session, or <a href="login.php">Log In</a> to access your saved lists </p>
-<form method="POST">
-    <?php if (isset($_SESSION['username'])) {
+<?php 
+    displayMessage(); 
+    if (!isset($_SESSION['username'])) {
+        echo ("<p> Start your productivity session, or <a href='login.php'>Log In</a> to access your saved lists </p>");
+    } else {
+        echo ("Continue your productivity sessions!");
+    }
+    echo ("<form method='POST'>");
+    if (isset($_SESSION['username'])) {
         echo ("<input type='submit' name='logout' value='Logout'>");
-    } ?>
+    }
+?>
     <input type='submit' name='save' value='Save'>
     <input type='submit' id='addtask' value='+'>
     <div id='taskfield'></div>
