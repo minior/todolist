@@ -41,6 +41,6 @@ if (isset($_POST['create'])) {
         <input type='submit' name='create' value='Create' onclick='return createValidate();'> </br>
         <input type='submit' name='cancel' value='Cancel'>
     </form>
-<script src="js-accounthandling.js"></script>
+<!--<script src="js-accounthandling.js"></script>-->
 </body>
 </html>

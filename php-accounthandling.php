@@ -31,9 +31,9 @@ function accountCreate($pdo, $username, $email, $pw, $cfmpw) {
                 header('location: accountcreate.php');
                 exit;
             } else {
-                //pw validation (at least 1 letter and at least 1 digit) & pw match w cfmpw
-                if (!(preg_match('/[A-Z]/i', $pw) && preg_match('/[0-9]/i', $pw)) || strlen($pw < 8)) {
-                    $_SESSION['errormsg'] = 'Password must contain at least one letter and one digit, & be at least 8 characters long';
+                //pw validation (at least 1 letter and at least 1 digit) & pw match w cfmpw & min 8 chars
+                if (!(preg_match('/[A-Z]/i', $pw) && preg_match('/[0-9]/', $pw)) || strlen($pw) < 8) {
+                    $_SESSION['errormsg'] = 'Password must contain at least one letter and one digit, and be at least 8 characters long';
                     header ('location: accountcreate.php');
                     exit;
                 } elseif ($pw !== $cfmpw) {
