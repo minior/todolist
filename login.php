@@ -11,7 +11,7 @@ if(isset($_POST['cancel'])) {
 session_start();
 //if logged in, redir to index
 if(isset($_SESSION['user_id'])) {
-    header("location: index.php". $_SESSION['user_id']);
+    header("location: index.php?user_id=". $_SESSION['user_id']);
     exit;
 }
 //validate user info (require & call fn)

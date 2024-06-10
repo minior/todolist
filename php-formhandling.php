@@ -4,7 +4,7 @@ function loginValidate($pdo, $username, $pw) {
     if(( strlen($pw) < 1 ) || ( strlen($username) < 1 )) {
         $_SESSION['errormsg'] = 'Please fill out both fields.';
         header ('location: login.php');
-        return;
+        exit;
     } else {
         //check for database match
         $pwcheck = password_hash($pw, PASSWORD_DEFAULT);
@@ -15,14 +15,14 @@ function loginValidate($pdo, $username, $pw) {
             error_log("login failed" . $username . $pwcheck);
             $_SESSION['errormsg'] = 'Incorrect username or password.';
             header ('location: login.php');
-            return;
+            exit;
         } else {
             error_log("login success" . $username . $pwcheck);
             $_SESSION['successmsg'] = 'Welcome back!';
             $_SESSION['username'] = $row['username'];
             $_SESSION['user_id'] = $row['user_id'];
-            header ('location:index.php'. $_SESSION['user_id']);
-            return;
+            header ('location:index.php?user_id='. $_SESSION['user_id']);
+            exit;
         }
     }
 }

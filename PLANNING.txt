@@ -5,10 +5,11 @@ NEXT STEPS
         - DONE accountcreate (user n email n pw filled)
             - DONE JS validation
             - DONE php validation 
-                - DONE alphanumeric username (or inc _) & pw containing 1 alphabet + 1 number (regex)
+                - DONE alphanumeric username (or inc _) & pw containing 1 alphabet + 1 number (regex) + 8 chars
         - DONE add pw hashing before inserting
         - DONE add email field to database, to be along with username
     - index: start populating html / javascript actual todolist (refer to add/edit.php in 10 htdocs)
+        - make task input fields prettier (no outline etc eg. Notion)
     - login: DONE form of login page 
         -> DONE php login validation 
         - show password buttons
@@ -16,6 +17,7 @@ NEXT STEPS
     - next feature: DONE form validation in login 
         - DONE js and php files 
     - DONE add function file for echoing and unsetting error / success msges
+    - styling w css etc.
     - might combine some function files (ac create & login tgt maybe)
         - might organise functions into classes, then follow psr-4 (class match file name)
     - add email confirmation (send email for validation, delete from database if not confirmed after x days)
@@ -25,6 +27,14 @@ NEXT STEPS
     
     -feature: pretty-fy js alert for form validations
     -expand feature: email validation, allow ALL types of domains eg '.fr'
+    -feature: subtasks
+    -feature: something date related (like what i need) eg. self closing when completed to a diff page
+    -feature: task groupings
+    -feature: clickable tasks to see more information (eg. Notion)
+    -feature: add task button opens up a popup rather than new page (eg. Notion)
+    -feature: editable deadline from index.php that auto-submits (if valid) to database without a submit button
+    -feature: grouping tasks by deadline (no idea how to achieve this)
+
 
 MY CONVENTIONS
     - classes use PascalCase, functions & methods use camelCase, variables use snake_case

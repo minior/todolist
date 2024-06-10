@@ -8,7 +8,7 @@ session_start();
 //redir if logged in
 if(isset($_SESSION['user_id'])) {
     $_SESSION['errormsg'] = 'Already logged in.';
-    header('location: index.php'. $_SESSION['user_id']);
+    header('location: index.php?user_id='. $_SESSION['user_id']);
     exit;
 }
 
@@ -31,14 +31,14 @@ if (isset($_POST['create'])) {
     <?php displayMessage(); ?>
     <form method = "POST">
         <label for='username'> Username </label>
-        <input type='text' name='username' id='username'>
+        <input type='text' name='username' id='username'> </br>
         <label for='email'> Email Address </label>
-        <input type='text' name='email' id='email'>
+        <input type='text' name='email' id='email'> </br>
         <label for='pw'> Password </label>
-        <input type='password' name='pw' id='pw'>
+        <input type='password' name='pw' id='pw'> </br>
         <label for='cfmpw'> Confirm Password </label>
-        <input type='password' name='cfmpw' id='cfmpw'>
-        <input type='submit' name='create' value='Create' onclick='return createValidate();'>
+        <input type='password' name='cfmpw' id='cfmpw'> </br>
+        <input type='submit' name='create' value='Create' onclick='return createValidate();'> </br>
         <input type='submit' name='cancel' value='Cancel'>
     </form>
 <script src="js-accounthandling.js"></script>
