@@ -60,7 +60,7 @@ if (isset ($_SESSION['username'])) {
     foreach($rows as $row) {
         $task++;
         //NOT DONE deadline sorting
-        if ($row['status'] = 1) {$checked = "checked = 'true'";} else {$checked = '';}
+        if ($row['status'] == '1') {$checked = "checked";} else {$checked = '';}
         echo("<div id='task" . $task . "'>");
         echo("<input type='checkbox' name='status" . $task . "' $checked >");
         echo("<input type='text' name='task" . $task . "' value='" . $row['task'] . "'>");
