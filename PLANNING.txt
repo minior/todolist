@@ -13,6 +13,7 @@ NEXT STEPS
     - login: DONE form of login page 
         -> DONE php login validation 
             - DONE fix password validation using password_verify()
+            - inc. password_needs_rehash logic
         - show password buttons
         - DONE ensure match with database
             - DONE change validation to 'username not registered / not in use'
