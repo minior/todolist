@@ -51,7 +51,7 @@ if (isset($_SESSION['username'])) {
 ?>
     <input type='submit' name='save' value='Save'>
     <input type='submit' id='addtask' value='+'>
-    <div id='taskfield'></div>
+    <div id='taskfield'>
 </form>
 <?php
 //iterate task rows
@@ -64,9 +64,11 @@ if (isset ($_SESSION['username'])) {
         echo("<div id='task" . $task . "'>");
         echo("<input type='checkbox' name='status" . $task . "' $checked >");
         echo("<input type='text' name='task" . $task . "' value='" . $row['task'] . "'>");
-        echo("<input type='button' value='-' onclick='");
+        echo('<input type="button" value="-" onclick="document.getElementById("task' . $task . '").innerText="remove working">');
+        echo("</div>");
     }
 }
+echo("</div>")
 ?>
 <!-- javascript buttons etc. for populating task field . see coursera courses 9 & 10 -->
 <!-- logout -->
