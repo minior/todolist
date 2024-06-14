@@ -27,6 +27,7 @@ NEXT STEPS
         - add prohibited words for usernames
     - add feature to show task complete date
     - add pages for edit and delete account info 
+    - add undo ctrl-z feature for index page
     
     -feature: pretty-fy js alert for form validations
     -expand feature: email validation, allow ALL types of domains eg '.fr'

@@ -52,7 +52,6 @@ if (isset($_SESSION['username'])) {
     <input type='submit' name='save' value='Save'>
     <input type='submit' id='addtask' value='+'>
     <div id='taskfield'>
-</form>
 <?php
 //iterate task rows
 if (isset ($_SESSION['username'])) {
@@ -70,6 +69,7 @@ if (isset ($_SESSION['username'])) {
 }
 echo("</div>")
 ?>
+</form>
 <!-- javascript buttons etc. for populating task field . see coursera courses 9 & 10 -->
 <!-- logout -->
 </body>
