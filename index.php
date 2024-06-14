@@ -50,27 +50,36 @@ if (isset($_SESSION['username'])) {
     }
 ?>
     <input type='submit' name='save' value='Save'>
-    <input type='submit' id='addtask' value='+'>
+    <input type='button' id='addtask' value='+'>
     <div id='taskfield'>
 <?php
 //iterate task rows
 if (isset ($_SESSION['username'])) {
-    $task=1;
+    $taskcount = 1;
     foreach($rows as $row) {
-        $task++;
         //NOT DONE deadline sorting
         if ($row['status'] == '1') {$checked = "checked";} else {$checked = '';}
-        echo("<div id='task" . $task . "'>");
-        echo("<input type='checkbox' name='status" . $task . "' $checked >");
-        echo("<input type='text' name='task" . $task . "' value='" . $row['task'] . "'>");
-        echo('<input type="button" value="-" onclick="document.getElementById("task' . $task . '").innerText="remove working">');
+        echo("<div id='task" . $taskcount . "'>");
+        echo("<input type='checkbox' name='status" . $taskcount . "' $checked >");
+        echo("<input type='text' name='task" . $taskcount . "' value='" . $row['task'] . "'>");
+        echo("<input type='date' name='deadline" . $taskcount . "' value='" . $row['deadline'] . "'>");
+        echo('<input type="button" value="-" onclick="document.getElementById(\'task' . $taskcount . '\').remove()">');
         echo("</div>");
+        $taskcount++;
     }
 }
-echo("</div>")
+echo("</div>");
+if ($taskcount > 2) {
+    error_log('user '.$_SESSION['username'].' has submitted a total of '. $taskcount .' tasks!');
+}
 ?>
 </form>
 <!-- javascript buttons etc. for populating task field . see coursera courses 9 & 10 -->
+<script>
+    let taskcount = <?=$taskcount?>;
+</script>
+<script src="js-addtask.js"></script>
+<script> console.log('task counter:'+(taskcount-1));</script>
 <!-- logout -->
 </body>
 </html>

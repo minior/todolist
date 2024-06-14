@@ -38,6 +38,7 @@ NEXT STEPS
     -feature: add task button opens up a popup rather than new page (eg. Notion)
     -feature: editable deadline from index.php that auto-submits (if valid) to database without a submit button
     -feature: grouping tasks by deadline (no idea how to achieve this)
+        -feature: allow user to sort by creation, deadline, or manual (also allow ascending vs descending)
 
 
 MY CONVENTIONS

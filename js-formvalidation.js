@@ -1,6 +1,6 @@
 //get pw & username, validate that they are 1. not empty
 function loginValidate() { 
-    console.log('Validating form fields...')
+    console.log('Validating form fields...');
     try {
         const pw = document.getElementById('pw');
         const username = document.getElementById('username');
