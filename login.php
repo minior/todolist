@@ -22,12 +22,17 @@ if(isset($_POST['login'])) {
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-    <title> Login Page </title>
-        <meta charset='utf-8'>
-        <meta name="viewport" content="width=device-width">
-        <!-- css style sheet -->
-    </head>     
+<head>
+<title> Login Page </title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width">
+    <!-- css style sheet -->
+    <style>
+        body {
+            text-align:center;
+        }
+    </style>    
+</head>     
 <body>
     <h1> Enter Login Details </h1>
 <?php displayMessage(); ?>

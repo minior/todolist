@@ -24,6 +24,11 @@ if (isset($_POST['create'])) {
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width">
     <!-- css style sheet -->
+    <style>
+        body {
+            text-align:center;
+        }
+    </style>
 </head>
 <body>
     <h1> Create an account to store your tasks! </h1>

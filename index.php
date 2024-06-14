@@ -29,12 +29,17 @@ if (isset($_SESSION['username'])) {
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>minior's To-Do List</title>
-        <meta charset='utf-8'>
-        <meta name="viewport" content="width=device-width">
-        <!-- css style sheet -->
-    </head>
+<head>
+    <title>minior's To-Do List</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width">
+    <!-- css style sheet -->
+    <style>
+        body {
+            text-align:center;
+        }
+    </style>
+</head>
 <body>
 <?= '<h1> Welcome'. htmlentities($username).'! </h1>' ?>
 <?php 
@@ -66,12 +71,12 @@ if (isset ($_SESSION['username'])) {
         echo('<input type="button" value="-" onclick="document.getElementById(\'task' . $taskcount . '\').remove()">');
         echo("</div>");
         $taskcount++;
+        if ($taskcount > 2) {
+            error_log('user '.$_SESSION['username'].' has submitted a total of '. $taskcount .' tasks!');
+        }
     }
 }
 echo("</div>");
-if ($taskcount > 2) {
-    error_log('user '.$_SESSION['username'].' has submitted a total of '. $taskcount .' tasks!');
-}
 ?>
 </form>
 <!-- javascript buttons etc. for populating task field . see coursera courses 9 & 10 -->
