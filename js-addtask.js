@@ -6,10 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         console.log('adding task field ' + taskcount);
 
+        const taskfield = document.getElementById('taskfield');
+
         const taskitem = document.createDocumentFragment();
         //defining child items
 
         const taskcontainer = document.createElement('div');
+        taskcontainer.id = 'task' + taskcount;
 
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
@@ -18,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const text = document.createElement('input');
         text.type = 'text';
         text.name = 'task' + taskcount;
+        text.size = 30;
+        text.maxLength = 30;
 
         const deadline = document.createElement('input');
         deadline.type = 'date';

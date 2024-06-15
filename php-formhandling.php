@@ -25,7 +25,7 @@ function loginValidate($pdo, $username, $pw) {
                 exit;
             } else {
             error_log("login success" . $username . $pw);
-            $_SESSION['successmsg'] = 'Welcome back!';
+            $_SESSION['successmsg'] = 'Welcome back ' . $row['username'] . '!';
             $_SESSION['username'] = $row['username'];
             $_SESSION['user_id'] = $row['user_id'];
             header ('location:index.php?user_id='. $_SESSION['user_id']);
