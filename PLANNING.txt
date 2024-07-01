@@ -34,7 +34,7 @@ NEXT STEPS
     -feature: implement tracking of number of users & activity (clickthrus etc.)
     -feature: pretty-fy js alert for form validations
     -feature: allow non-logged in users to have tasks persist across refreshes
-    -expand feature: email validation, allow ALL types of domains eg '.fr'
+    -expand feature: email validation, allow ALL types of domains eg '.fr' (can use filter_var())
     -feature: subtasks
     -feature: something date related (like what i need) eg. self closing when completed to a diff page
     -feature: task groupings
