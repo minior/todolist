@@ -10,7 +10,6 @@ NEXT STEPS
         - DONE add email field to database, to be along with username
     - DONE index: start populating html / javascript actual todolist (refer to add/edit.php in 10 htdocs)
         - logic for saving & updating tasklist
-        - feature: grouping tasks by deadline (no idea how to achieve this)
     - login: DONE form of login page 
         -> DONE php login validation 
             - DONE fix password validation using password_verify()
@@ -31,6 +30,7 @@ NEXT STEPS
     - add pages for edit and delete account info 
     - add undo ctrl-z feature for index page
 
+    -feature: grouping tasks by deadline (no idea how to achieve this)
     -feature: implement tracking of number of users & activity (clickthrus etc.)
     -feature: pretty-fy js alert for form validations
     -feature: allow non-logged in users to have tasks persist across refreshes
@@ -43,7 +43,8 @@ NEXT STEPS
     -feature: add task button opens up a popup rather than new page (eg. Notion)
     -feature: editable deadline from index.php that auto-submits (if valid) to database without a submit button
         -feature: allow user to sort by creation, deadline, or manual (also allow ascending vs descending)
-    -continuiation: better css styling
+    -continuation: better css styling
+    -continuation: use update instead of delete & insert for tasklist to dB updates (may needd to ask on stackoverflow)
 
 
 MY CONVENTIONS

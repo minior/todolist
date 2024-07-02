@@ -16,7 +16,7 @@ if (isset($_SESSION['user_id'])) {
 } else {
     $username='';
 }
-//NOT DONE submit new task data
+//NOT DONE submit new task data (delete and insert -> improve next time)
 if (isset($_POST['save'])) {
     echo 'save button working';
 }
